@@ -651,3 +651,10 @@
   height: 400px;
   width: 100%;
 }
+
+.stopvalve {
+  background-color: #79d9ff;
+}
+.wSystemValve {
+  background-color: #00a871;
+}

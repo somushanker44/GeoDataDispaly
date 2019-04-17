@@ -8,7 +8,13 @@ const columns = displayMap => [
     width: 80,
     Header: "Object Id",
     id: "id",
-    accessor: "id"
+    accessor: "id",
+    Cell: row =>
+      row.original.table_name === "wCurbStopValve" ? (
+        <a className="stopvalve">{row.original.id}</a>
+      ) : (
+        <a className="wSystemValve">{row.original.id}</a>
+      )
   },
   {
     width: 120,
@@ -48,6 +54,12 @@ const columns = displayMap => [
 export default props => (
   <ReactTable
     data={props.data}
+    defaultSorted={[
+      {
+        id: "id",
+        desc: false
+      }
+    ]}
     heading="Household Members"
     filterable
     columns={columns(props.displayMap)}
