@@ -1,2 +1,0 @@
-# GeoDataDispaly
-Created with CodeSandbox
